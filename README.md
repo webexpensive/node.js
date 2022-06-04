@@ -10,3 +10,6 @@
 * Redis
 * HTML5/CSS3 (Framework Bootstrap)
 * JavaScript
+
+## Главная страница
+![Главная страница](https://i.ibb.co/Wx0m2Kv/2.jpg)
