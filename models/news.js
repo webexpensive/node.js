@@ -1,0 +1,15 @@
+const mongoose = require("mongoose");
+ 
+const Schema = mongoose.Schema;
+// установка схемы
+const newsScheme = new Schema({
+    title: { type : String , unique : true, required : true, dropDups: true },
+	url: { type : String , unique : true, required : true, dropDups: true },
+    img: String,
+	description: String,
+	keys: String,
+	content_short: String,
+	content: String,
+	date_add: Date
+});
+module.exports = mongoose.model("News", newsScheme);
