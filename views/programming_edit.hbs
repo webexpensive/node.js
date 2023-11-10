@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="/static/minified/themes/default.min.css" id="theme-style">
+<script src="/static/minified/sceditor.min.js"></script>
+<script src="/static/minified/icons/monocons.js"></script>
+<script src="/static/minified/formats/bbcode.js"></script>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+	<div class="container d-flex align-items-center justify-content-between">
+
+		<div class="logo">
+			<h2 class="text-light"><a href="/"><span>Node.js</span></a></h2>
+		</div>
+
+		<nav id="navbar" class="navbar">
+			<ul>
+				<li><a class="nav-link scrollto active" href="/">Главная</a></li>
+				<li><a class="getstarted scrollto" href="tel:89633673184" rel="nofollow">Заказать</a></li>
+			</ul>
+			<i class="bi bi-list mobile-nav-toggle"></i>
+		</nav><!-- .navbar -->
+
+	</div>
+</header><!-- End Header -->
+
+<main id="main">
+
+    <!-- ======= Services Section ======= -->
+	<section id="services" class="services">
+		<div class="container" data-aos="fade-up">
+
+			<div class="section-title">
+				<h2>Формы</h2>
+				<p>Админ-панель</p>
+			</div>{{#each programming}}
+			<form name="adminProgramming" id="adminProgramming" enctype="multipart/form-data">
+				<input type="hidden" name="id_programming" id="id_programming" value="{{this._id}}">
+				<div class="form-group">
+					<label for="title_news">Заголовок*</label>
+					<input type="text" class="form-control" id="title_programming" name="title_programming" placeholder="Заголовок" required maxlength="150" value="{{this.title}}">
+				</div><br>
+				<div class="form-group">
+					<label for="title_news">URL-адрес*</label>
+					<input type="text" class="form-control" id="url_programming" name="url_programming" placeholder="url" required value="{{this.url}}">
+				</div><br>
+				<div class="form-group">
+					<label for="title_news">Описание*</label>
+					<input type="text" class="form-control" id="description_programming" name="description_programming" placeholder="Описание" required maxlength="150" value="{{this.description}}">
+				</div><br>
+				<div class="form-group">
+					<label for="title_news">Ключевые слова*</label>
+					<input type="text" class="form-control" id="keys_programming" name="keys_programming" placeholder="Ключевые слова" required maxlength="150" value="{{this.keys}}">
+				</div><br>
+				<div class="form-group">
+					<label for="text_news_short">Краткое содержимое*</label>
+					<textarea class="form-control" id="text_programming_short" name="text_programming_short" rows="3" required>{{this.content_short}}</textarea>
+				</div><br>
+				<div class="form-group">
+					<label for="text_news">Текст статьи*</label>
+					<textarea class="form-control" id="text_programming" name="text_programming" rows="6" required>{{this.content}}</textarea>
+				</div><br>
+				<div class="form-group">
+					<input class="form-check-input" type="checkbox" value="{{this.visibility}}" {{#if this.visibility}}checked{{/if}} name="visibility_programming" id="visibility_programming">
+					<label class="form-check-label" for="_news">
+						Статья доступна для просмотра
+					</label>
+				</div><br>
+				<div id="response_messages"></div>
+				<button type="submit" class="btn btn-primary">Обновить статью</button>
+			</form>{{/each}}
+			
+			<script src="/static/js/edit_programming.js"></script>
+
+		</div>
+	</section><!-- End Services Section -->
+
+</main><!-- End #main -->

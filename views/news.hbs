@@ -1,0 +1,66 @@
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+	<div class="container d-flex align-items-center justify-content-between">
+
+		<div class="logo">
+			<h2 class="text-light"><a href="/" title="Разработка интернет-приложений"><span>Node.js</span></a></h2>
+		</div>
+
+		<nav id="navbar" class="navbar">
+			<ul>
+				<li><a class="nav-link scrollto active" href="/news/" title="Новости">Новости</a></li>
+				<li><a class="nav-link scrollto" href="/programming/" title="Программирование">Программирование</a></li>
+				<li><a class="nav-link scrollto" href="/services/" title="Услуги">Услуги</a></li>
+				<li><a class="nav-link scrollto" href="/" title="Разработка интернет-приложений">Главная</a></li>
+				<li><a class="getstarted scrollto" href="tel:89633673184" rel="nofollow">Заказать</a></li>
+			</ul>
+			<i class="bi bi-list mobile-nav-toggle"></i>
+		</nav><!-- .navbar -->
+
+	</div>
+</header><!-- End Header -->
+
+<main id="main">
+
+	<section class="breadcrumbs">
+		<div class="container">
+
+			<div class="d-flex justify-content-between align-items-center">
+				<h2>Новость</h2>
+				<ol>
+					<li><a href="/" title="Разработка интернет-приложений">Главная</a></li>
+					<li><a href="/news/" title="Новости">Новости</a></li>
+				</ol>
+			</div>
+
+		</div>
+	</section><!-- Breadcrumbs Section -->
+
+	<div class="container pt-3">{{#each news}}
+		<div class="card mb-3 unwidth">
+			<img src="/static/uploads/{{this.img}}" class="card-img-top" title="{{this.title}}" alt="{{this.title}}">
+		</div>
+		<h1 class="mt-2">{{this.title}}</h1>
+		<p class="card-text">
+		<small class="text-muted">{{this.date_add}}</small>
+		</p>
+		<p class="mt-5 about__text">{{{this.content}}}</p>
+		<div class="testimonial__alexander">
+			<div class="testimonial__person-wrapper">
+				<div class="testimonial__person d-flex">
+					<div class="testimonial__avater">
+						<img src="/static/img/author.jpg" alt="Fullstack-разработчик в Москве">
+					</div>
+					<div class="testimonial__info">
+						<h5>Александр</h5>
+						<span>Fullstack-разработчик в Москве</span>
+					</div>
+				</div>
+			</div> 
+			<div class="testimonial__text testimonial__text-2 white-bg mt--40">
+				<p>Профессиональная разработка веб-приложений на Node.js с использованием Express. Создание, продвижение, поддержка и обслуживание <b>Веб-проектов</b>. Эффективно, прибыльно.</p>
+			</div>
+		</div>
+	</div>{{/each}}
+
+</main><!-- End #main -->

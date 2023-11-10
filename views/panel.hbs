@@ -1,0 +1,253 @@
+<link rel="stylesheet" href="/static/minified/themes/default.min.css" id="theme-style">
+<script src="/static/minified/sceditor.min.js"></script>
+<script src="/static/minified/icons/monocons.js"></script>
+<script src="/static/minified/formats/bbcode.js"></script>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+	<div class="container d-flex align-items-center justify-content-between">
+
+		<div class="logo">
+			<h2 class="text-light"><a href="/"><span>Node.js</span></a></h2>
+		</div>
+
+		<nav id="navbar" class="navbar">
+			<ul>
+				<li><a class="nav-link scrollto active" href="/">Главная</a></li>
+				<li><a class="getstarted scrollto" href="tel:89633673184" rel="nofollow">Заказать</a></li>
+			</ul>
+			<i class="bi bi-list mobile-nav-toggle"></i>
+		</nav><!-- .navbar -->
+
+	</div>
+</header><!-- End Header -->
+
+<main id="main">
+
+    <!-- ======= Services Section ======= -->
+	<section id="services" class="services">
+		<div class="container" data-aos="fade-up">
+
+			<div class="section-title">
+				<h2>Формы</h2>
+				<p>Основные настройки</p>
+			</div>
+			
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="home-tab0" data-bs-toggle="tab" data-bs-target="#home0" type="button" role="tab" aria-controls="home0" aria-selected="true">Статусы</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="profile-tab0" data-bs-toggle="tab" data-bs-target="#profile0" type="button" role="tab" aria-controls="profile0" aria-selected="false">Настроить сайт</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="home0" role="tabpanel" aria-labelledby="home-tab0">
+					<div class="pb-5"></div>
+					<table class="table" id="setting_content_load">
+					</table>
+				</div>
+				<div class="tab-pane fade" id="profile0" role="tabpanel" aria-labelledby="profile-tab0">
+					<div class="pb-5"></div>
+					<form name="adminSettings" id="adminSettings" enctype="multipart/form-data">
+						<div class="form-group">
+							<label for="title_news">Название сайта*</label>
+							<input type="text" class="form-control" id="title_setting" name="title_setting" placeholder="Название сайта" maxlength="150" required>
+						</div><br>
+						<div class="form-group">
+							<label for="title_news">Описание*</label>
+							<input type="text" class="form-control" id="description_setting" name="description_setting" placeholder="Описание" maxlength="150" required>
+						</div><br>
+						<div class="form-group">
+							<label for="title_news">Ключевые слова*</label>
+							<input type="text" class="form-control" id="keys_setting" name="keys_setting" placeholder="Ключевые слова" maxlength="150" required>
+						</div><br>
+						<div class="form-group">
+							<label for="filedata_news">Обложка*</label>
+							<input class="form-control" type="file" name="filedata_setting" id="filedata_setting">
+						</div><br>
+						<div id="response_messages_settings"></div>
+						<button type="submit" class="btn btn-primary">Обновить настройки</button>
+					</form>
+				</div>
+			</div>
+			
+			<div class="pb-5"></div>
+			
+			<div class="section-title">
+				<h2>Формы</h2>
+				<p>Контент</p>
+			</div>
+			
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Список новостей</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Добавить новость</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+					<div class="pb-5"></div>
+					<table class="table" id="news_content_load">
+					</table>
+					<div class="d-flex justify-content-center"><div id="pagin_news_content_load"></div></div>
+				</div>
+				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+					<div class="pb-5"></div>
+					<form name="adminNews" id="adminNews" enctype="multipart/form-data">
+						<div class="form-group">
+							<label for="title_news">Заголовок*</label>
+							<input type="text" class="form-control" id="title_news" name="title_news" placeholder="Заголовок" maxlength="150" required>
+						</div><br>
+						<div class="form-group">
+							<label for="title_news">URL-адрес*</label>
+							<input type="text" class="form-control" id="url_news" name="url_news" placeholder="url" required>
+						</div><br>
+						<div class="form-group">
+							<label for="title_news">Описание*</label>
+							<input type="text" class="form-control" id="description_news" name="description_news" placeholder="Описание" maxlength="150" required>
+						</div><br>
+						<div class="form-group">
+							<label for="title_news">Ключевые слова*</label>
+							<input type="text" class="form-control" id="keys_news" name="keys_news" placeholder="Ключевые слова" maxlength="150" required>
+						</div><br>
+						<div class="form-group">
+							<label for="text_news_short">Краткое содержимое*</label>
+							<textarea class="form-control" id="text_news_short" name="text_news_short" rows="3" required></textarea>
+						</div><br>
+						<div class="form-group">
+							<label for="text_news">Текст новости*</label>
+							<textarea class="form-control" id="text_news" name="text_news" rows="6" required></textarea>
+						</div><br>
+						<div class="form-group">
+							<label for="filedata_news">Обложка новости*</label>
+							<input class="form-control" type="file" name="filedata_news" id="filedata_news">
+						</div><br>
+						<div class="form-group">
+							<input class="form-check-input" type="checkbox" value="" checked name="visibility_news" id="visibility_news">
+							<label class="form-check-label" for="_news">
+								Новость доступна для просмотра
+							</label>
+						</div><br>
+						<div id="response_messages"></div>
+						<button type="submit" class="btn btn-primary">Добавить новость</button>
+					</form>
+				</div>
+			</div>
+			
+			<div class="pb-5"></div>
+			
+			<div class="section-title">
+				<h2>Формы</h2>
+				<p>Программирование</p>
+			</div>
+			
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home2" type="button" role="tab" aria-controls="home" aria-selected="true">Список статей</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile2" type="button" role="tab" aria-controls="profile" aria-selected="false">Добавить статью</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab">
+					<div class="pb-5"></div>
+					<table class="table" id="programming_content_load">
+					</table>
+					<div class="d-flex justify-content-center"><div id="pagin_programming_content_load"></div></div>
+				</div>
+				<div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile-tab">
+					<div class="pb-5"></div>
+					<form name="adminProgramming" id="adminProgramming" enctype="multipart/form-data">
+						<div class="form-group">
+							<label for="title_news">Заголовок*</label>
+							<input type="text" class="form-control" id="title_programming" name="title_programming" placeholder="Заголовок" maxlength="150" required>
+						</div><br>
+						<div class="form-group">
+							<label for="title_news">URL-адрес*</label>
+							<input type="text" class="form-control" id="url_programming" name="url_programming" placeholder="url" required>
+						</div><br>
+						<div class="form-group">
+							<label for="title_news">Описание*</label>
+							<input type="text" class="form-control" id="description_programming" name="description_programming" placeholder="Описание" maxlength="150" required>
+						</div><br>
+						<div class="form-group">
+							<label for="title_news">Ключевые слова*</label>
+							<input type="text" class="form-control" id="keys_programming" name="keys_programming" placeholder="Ключевые слова" maxlength="150" required>
+						</div><br>
+						<div class="form-group">
+							<label for="text_news_short">Краткое содержимое*</label>
+							<textarea class="form-control" id="text_programming_short" name="text_programming_short" rows="3" required></textarea>
+						</div><br>
+						<div class="form-group">
+							<label for="text_news">Текст статьи*</label>
+							<textarea class="form-control" id="text_programming" name="text_programming" rows="6" required></textarea>
+						</div><br>
+						<div class="form-group">
+							<input class="form-check-input" type="checkbox" value="" checked name="visibility_programming" id="visibility_programming">
+							<label class="form-check-label" for="_news">
+								Статья доступна для просмотра
+							</label>
+						</div><br>
+						<div id="response_messages_programming"></div>
+						<button type="submit" class="btn btn-primary">Добавить статью</button>
+					</form>
+				</div>
+			</div>
+			
+			<div class="pb-5"></div>
+			
+			<div class="section-title">
+				<h2>Медиабиблиотека</h2>
+				<p>Файлы</p>
+			</div>
+			
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home1" type="button" role="tab" aria-controls="home" aria-selected="true">Список загруженных файлов</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile1" type="button" role="tab" aria-controls="profile" aria-selected="false">Загрузить файлы</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+					<div class="pb-5"></div>
+					<table class="table" id="files_content_load">
+					</table>
+					<div class="d-flex justify-content-center"><div id="pagin_files_content_load"></div></div>
+				</div>
+				<div class="tab-pane fade" id="profile1" role="tabpanel" aria-labelledby="profile-tab">
+					<div class="pb-5"></div>
+					<form name="adminNodeFiles" id="adminNodeFiles" enctype="multipart/form-data">
+						<div class="form-group">
+							<label for="filedata_nodefiles">Файлы*</label>
+							<input class="form-control" type="file" name="filedata_nodefiles" id="filedata_nodefiles" multiple="multiple">
+						</div><br>
+						<div id="response_messages_images"></div>
+						<button type="submit" class="btn btn-primary">Загрузить файлы</button>
+					</form>
+				</div>
+			</div>
+			
+			<div class="pb-5"></div>
+			
+			<div class="pb-5"></div>
+			<div class="section-title">
+				<h2>Таблица</h2>
+				<p>Логи авторизаций</p>
+			</div>
+			<div class="w-100 p-4 text-center">
+				<table class="table table-sm" id="logs_content_load"></table>
+			</div>
+			<div class="d-flex justify-content-center"><div id="pagin_logs_content_load"></div></div>
+
+		</div>
+	</section><!-- End Services Section -->
+
+</main><!-- End #main -->
+
+<script src="/static/js/control_admin.js"></script>

@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="/static/minified/themes/default.min.css" id="theme-style">
+<script src="/static/minified/sceditor.min.js"></script>
+<script src="/static/minified/icons/monocons.js"></script>
+<script src="/static/minified/formats/bbcode.js"></script>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+	<div class="container d-flex align-items-center justify-content-between">
+
+		<div class="logo">
+			<h2 class="text-light"><a href="/"><span>Node.js</span></a></h2>
+		</div>
+
+		<nav id="navbar" class="navbar">
+			<ul>
+				<li><a class="nav-link scrollto active" href="/">Главная</a></li>
+				<li><a class="getstarted scrollto" href="tel:89633673184" rel="nofollow">Заказать</a></li>
+			</ul>
+			<i class="bi bi-list mobile-nav-toggle"></i>
+		</nav><!-- .navbar -->
+
+	</div>
+</header><!-- End Header -->
+
+<main id="main">
+
+    <!-- ======= Services Section ======= -->
+	<section id="services" class="services">
+		<div class="container" data-aos="fade-up">
+
+			<div class="section-title">
+				<h2>Формы</h2>
+				<p>Админ-панель</p>
+			</div>{{#each news}}
+			<form name="adminNews" id="adminNews" enctype="multipart/form-data">
+				<input type="hidden" name="id_news" id="id_news" value="{{this._id}}">
+				<div class="form-group">
+					<label for="title_news">Заголовок*</label>
+					<input type="text" class="form-control" id="title_news" name="title_news" placeholder="Заголовок" required maxlength="150" value="{{this.title}}">
+				</div><br>
+				<div class="form-group">
+					<label for="title_news">URL-адрес*</label>
+					<input type="text" class="form-control" id="url_news" name="url_news" placeholder="url" required value="{{this.url}}">
+				</div><br>
+				<div class="form-group">
+					<label for="title_news">Описание*</label>
+					<input type="text" class="form-control" id="description_news" name="description_news" placeholder="Описание" required maxlength="150" value="{{this.description}}">
+				</div><br>
+				<div class="form-group">
+					<label for="title_news">Ключевые слова*</label>
+					<input type="text" class="form-control" id="keys_news" name="keys_news" placeholder="Ключевые слова" required maxlength="150" value="{{this.keys}}">
+				</div><br>
+				<div class="form-group">
+					<label for="text_news_short">Краткое содержимое*</label>
+					<textarea class="form-control" id="text_news_short" name="text_news_short" rows="3" required>{{this.content_short}}</textarea>
+				</div><br>
+				<div class="form-group">
+					<label for="text_news">Текст новости*</label>
+					<textarea class="form-control" id="text_news" name="text_news" rows="6" required>{{this.content}}</textarea>
+				</div><br>
+				<div class="form-group">
+					<label for="filedata_news">Обложка новости*</label>
+					<input class="form-control" type="file" name="filedata_news" id="filedata_news">
+				</div><br>
+				<div class="form-group">
+					<input class="form-check-input" type="checkbox" value="{{this.visibility}}" {{#if this.visibility}}checked{{/if}} name="visibility_news" id="visibility_news">
+					<label class="form-check-label" for="_news">
+						Новость доступна для просмотра
+					</label>
+				</div><br>
+				<div id="response_messages"></div>
+				<button type="submit" class="btn btn-primary">Обновить новость</button>
+			</form>{{/each}}
+			
+			<script src="/static/js/edit_news.js"></script>
+
+		</div>
+	</section><!-- End Services Section -->
+
+</main><!-- End #main -->
