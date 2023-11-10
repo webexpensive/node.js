@@ -15,7 +15,7 @@
 ![Главная страница](https://webexpensive.ru/git/1.jpg)
 
 ## Форма в администраторской
-![Форма в администраторской](https://webexpensive.ru/git/2.jpg)
+![Форма в администраторской](https://webexpensive.ru/git/3.jpg)
 
 ## Лента новостей
-![Лента новостей](https://webexpensive.ru/git/3.jpg)
+![Лента новостей](https://webexpensive.ru/git/2.jpg)
