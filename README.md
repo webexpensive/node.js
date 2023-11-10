@@ -12,10 +12,10 @@
 * Vanilla JavaScript
 
 ## Главная страница
-![Главная страница](https://i.ibb.co/Wx0m2Kv/2.jpg)
+![Главная страница](https://webexpensive.ru/git/1.jpg)
 
-## Авторизация
-![Авторизация](https://i.ibb.co/rM7J3t2/2.jpg)
+## Форма в администраторской
+![Форма в администраторской](https://webexpensive.ru/git/2.jpg)
 
 ## Лента новостей
-![Лента новостей](https://i.ibb.co/j6BqvYm/2.jpg)
+![Лента новостей](https://webexpensive.ru/git/3.jpg)
